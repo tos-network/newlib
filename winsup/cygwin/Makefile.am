@@ -12,7 +12,7 @@ AUTOMAKE_OPTIONS=-Wno-override
 
 include $(top_srcdir)/Makefile.am.common
 
-COMMON_CFLAGS=-Wimplicit-fallthrough=5 -Werror -Wno-error=array-bounds -fmerge-constants -ftracer
+COMMON_CFLAGS=-Wimplicit-fallthrough=5 -Werror -Wno-error=array-bounds -Wno-error=narrowing -fmerge-constants -ftracer
 if TARGET_X86_64
 COMMON_CFLAGS+=-mcmodel=small
 endif

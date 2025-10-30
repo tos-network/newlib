@@ -1478,8 +1478,12 @@ out:
 /* In Mingw-w64, MsV1_0S4ULogon and MSV1_0_S4U_LOGON are only defined
    in ddk/ntifs.h.  We can't include this. */
 
+#ifndef MsV1_0S4ULogon
 #define MsV1_0S4ULogon ((MSV1_0_LOGON_SUBMIT_TYPE) 12)
+#endif
 
+#ifndef _MSV1_0_S4U_LOGON_DEFINED
+#define _MSV1_0_S4U_LOGON_DEFINED
 typedef struct _MSV1_0_S4U_LOGON
 {
   MSV1_0_LOGON_SUBMIT_TYPE MessageType;
@@ -1487,6 +1491,7 @@ typedef struct _MSV1_0_S4U_LOGON
   UNICODE_STRING UserPrincipalName;
   UNICODE_STRING DomainName;
 } MSV1_0_S4U_LOGON, *PMSV1_0_S4U_LOGON;
+#endif
 
 /* Missing in Mingw-w64 */
 #define KERB_S4U_LOGON_FLAG_IDENTITY 0x08

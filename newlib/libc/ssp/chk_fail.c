@@ -2,7 +2,7 @@
 #include <string.h>
 #include <unistd.h>
 
-void raise(int);
+int raise(int);
 
 void
 __attribute__((__noreturn__))

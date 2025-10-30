@@ -19,6 +19,9 @@ details. */
 #include "lc_msg.h"
 #include "lc_era.h"
 
+/* Disable use-after-free warning for realloc patterns used in this file */
+#pragma GCC diagnostic ignored "-Wuse-after-free"
+
 #define _LC(x)	&lc_##x##_ptr,lc_##x##_end-lc_##x##_ptr
 
 #define getlocaleinfo(category,type) \

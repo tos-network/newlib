@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 1999 Kungliga Tekniska Högskolan
+ * Copyright (c) 1999 Kungliga Tekniska Hï¿½gskolan
  * (Royal Institute of Technology, Stockholm, Sweden).
  * All rights reserved.
  *
@@ -29,7 +29,7 @@
  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. */
-#ifndef _SOLANA_SOURCE
+#ifndef _TOS_SOURCE
 
 #define _GNU_SOURCE
 #include <stddef.h>
@@ -509,4 +509,4 @@ strptime (const char *buf, const char *format, struct tm *timeptr)
   return strptime_l (buf, format, timeptr, __get_current_locale ());
 }
 
-#endif /* _SOLANA_SOURCE */
+#endif /* _TOS_SOURCE */

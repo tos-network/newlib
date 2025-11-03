@@ -1083,8 +1083,8 @@ case $cpu-$vendor in
 	sb1el-*)
 		cpu=mipsisa64sb1el
 		;;
-	sbf*-*)
-		cpu=sbf
+	tbf*-* | tbpf*-*)
+		cpu=$(echo "$cpu" | sed 's/-.*$//')
 		;;
 	sh5e[lb]-*)
 		cpu=$(echo "$cpu" | sed 's/^\(sh.\)e\(.\)$/\1\2e/')
@@ -1236,7 +1236,7 @@ case $cpu-$vendor in
 			| riscv | riscv32 | riscv32be | riscv64 | riscv64be \
 			| rl78 | romp | rs6000 | rx \
 			| s390 | s390x \
-			| sbf | sbfel | sbfeb | bpf | bpfel | bpfeb \
+			| tbf | tbfel | tbfeb | tbpf | tbpfel | tbpfeb | tbpfv1 | tbpfv1el | tbpfv1eb | tbpfv2 | tbpfv2el | tbpfv2eb | bpf | bpfel | bpfeb \
 			| score \
 			| sh | shl \
 			| sh[1234] | sh[24]a | sh[24]ae[lb] | sh[23]e | she[lb] | sh[lb]e \
@@ -1729,7 +1729,7 @@ case $os in
 	     | skyos* | haiku* | rdos* | toppers* | drops* | es* \
 	     | onefs* | tirtos* | phoenix* | fuchsia* | redox* | bme* \
 	     | midnightbsd* | amdhsa* | unleashed* | emscripten* | wasi* \
-	     | nsk* | powerunix* | genode* | zvmoe* | qnx* | emx* | solana*)
+	     | nsk* | powerunix* | genode* | zvmoe* | qnx* | emx* | tos*)
 		;;
 	# This one is extra strict with allowed versions
 	sco3.2v2 | sco3.2v[4-9]* | sco5v6*)

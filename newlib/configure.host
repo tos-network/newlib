@@ -326,9 +326,9 @@ case "${host_cpu}" in
 	default_newlib_io_long_long="yes"
 	newlib_cflags="${newlib_cflags} -ffunction-sections -fdata-sections "
 	;;
-  sbf*)
-	machine_dir=sbf
-	newlib_cflags="${newlib_cflags} -D_LDBL_EQ_DBL=1 -D__GLIBC_USE\(...\)=0 -D_SOLANA_SOURCE --target=sbf-solana-solana"
+  tbf* | tbpf* | tbpfv1* | tbpfv2*)
+	machine_dir=tbf
+	newlib_cflags="${newlib_cflags} -D_LDBL_EQ_DBL=1 -D__GLIBC_USE\(...\)=0 -D_TOS_SOURCE --target=tbf-tos-tos"
 	;;
   sh | sh64)
 	machine_dir=sh
@@ -598,9 +598,9 @@ case "${host}" in
   powerpcle-*-pe)
 	posix_dir=posix
 	;;
-  sbf*-*-*)
-	machine_dir=sbf
-	newlib_cflags="${newlib_cflags} --target=sbf-solana-solana"
+  tbf*-*-* | tbpf*-*-* | tbpfv1*-*-* | tbpfv2*-*-*)
+	machine_dir=tbf
+	newlib_cflags="${newlib_cflags} --target=tbf-tos-tos"
 	;;
   sh*-*)
 	sys_dir=sh
@@ -896,7 +896,7 @@ newlib_cflags="${newlib_cflags} -DCLOCK_PROVIDED -DMALLOC_PROVIDED -DEXIT_PROVID
   riscv*-*-*)
 	syscall_dir=syscalls
 	;;
-  sbf*-*-*)
+  tbf*-*-* | tbpf*-*-* | tbpfv1*-*-* | tbpfv2*-*-*)
 	syscall_dir=syscalls
 	;;
   sh*-*-*)

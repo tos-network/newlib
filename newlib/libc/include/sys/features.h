@@ -261,7 +261,7 @@ extern "C" {
 #define	__GNU_VISIBLE		0
 #endif
 
-#ifdef _tos_SOURCE
+#ifdef _TOS_SOURCE
 #undef		__BSD_VISIBLE
 #define	__BSD_VISIBLE		0
 #define	_REENT_ONLY

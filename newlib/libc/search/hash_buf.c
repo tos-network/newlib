@@ -29,7 +29,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  */
-#ifndef _tos_SOURCE
+#ifndef _TOS_SOURCE
 
 #include <sys/param.h>
 #if defined(LIBC_SCCS) && !defined(lint)
@@ -360,4 +360,4 @@ __reclaim_buf(hashp, bp)
 	LRU_INSERT(bp);
 }
 
-#endif /* _tos_SOURCE */
+#endif /* _TOS_SOURCE */

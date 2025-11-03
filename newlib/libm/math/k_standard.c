@@ -11,7 +11,7 @@
  * ====================================================
  *
  */
-#ifndef _tos_SOURCE
+#ifndef _TOS_SOURCE
 
 #include "fdlibm.h"
 #include <errno.h>
@@ -351,4 +351,4 @@ static double zero = 0.0;	/* used as const */
 	return retval;
 }
 
-#endif /* _tos_SOURCE */
+#endif /* _TOS_SOURCE */

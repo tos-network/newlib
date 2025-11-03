@@ -40,7 +40,7 @@
  * I tried to look at Knuth (as cited by the Solaris manual page), but
  * nobody had a copy in the office, so...
  */
-#ifndef _tos_SOURCE
+#ifndef _TOS_SOURCE
 
 #include <sys/cdefs.h>
 #if 0
@@ -194,4 +194,4 @@ hsearch_r(ENTRY item, ACTION action, ENTRY **retval, struct hsearch_data *htab)
 	return 1;
 }
 
-#endif /* _tos_SOURCE */
+#endif /* _TOS_SOURCE */

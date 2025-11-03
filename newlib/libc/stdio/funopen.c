@@ -79,7 +79,7 @@ It is not portable.  See also the <<fopencookie>> interface from Linux.
 
 Supporting OS subroutines required: <<sbrk>>.
 */
-#ifndef _tos_SOURCE
+#ifndef _TOS_SOURCE
 
 #include <stdio.h>
 #include <errno.h>
@@ -272,4 +272,4 @@ funopen (const void *cookie,
 }
 #endif /* !_REENT_ONLY */
 
-#endif /* _tos_SOURCE */
+#endif /* _TOS_SOURCE */
